@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let taskStore = TaskStore()
         
         let todoTasks = [Task.init(name: "Meditate"), Task.init(name: "Buy Food"), Task.init(name: "Drink Watch")]
-        let doneTask = [Task.init(name: "Play Games")]
+        let doneTask = [Task.init(name: "Play Games", isDone: true)]
         
         taskStore.tasks = [todoTasks, doneTask]
 
