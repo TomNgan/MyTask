@@ -10,6 +10,14 @@ import UIKit
 
 class TasksTableViewController: UITableViewController {
     
+    // MARK: - Lifecycle of View
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        setUpNavigationBar()
+        setUpTableView()
+    }
+    
     //MARK: - View
     
     func setUpNavigationBar() {
@@ -42,6 +50,10 @@ class TasksTableViewController: UITableViewController {
         
     }
     
+    func setUpTableView() {
+        tableView.tableFooterView = UIView()
+    }
+    
     //MARK: - Controller
     var taskStore: TaskStore! {
         didSet {
@@ -51,15 +63,6 @@ class TasksTableViewController: UITableViewController {
             // Reload the table view
             tableView.reloadData()
         }
-    }
-    
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-        setUpNavigationBar()
-        
-        
-        
     }
     
     @objc private func rightBarBtnIsPressed() {
