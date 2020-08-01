@@ -60,17 +60,57 @@
 		A209221724D129E8003E60F5 /* MyTask */ = {
 			isa = PBXGroup;
 			children = (
+				A288CE3624D55464007B8CBA /* Models */,
+				A288CE3B24D5553E007B8CBA /* Views */,
+				A288CE3724D55477007B8CBA /* Controllers */,
+				A288CE3824D55488007B8CBA /* Helpers */,
+				A288CE3924D55492007B8CBA /* System */,
+			);
+			path = MyTask;
+			sourceTree = "<group>";
+		};
+		A288CE3624D55464007B8CBA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2BB166224D1BC590001A78B /* Task.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A288CE3724D55477007B8CBA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A2BB166024D161A70001A78B /* TasksTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A288CE3824D55488007B8CBA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A2BB166424D1BCC30001A78B /* TaskStore.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A288CE3924D55492007B8CBA /* System */ = {
+			isa = PBXGroup;
+			children = (
 				A209221824D129E8003E60F5 /* AppDelegate.swift */,
 				A209221A24D129E8003E60F5 /* SceneDelegate.swift */,
-				A2BB166024D161A70001A78B /* TasksTableViewController.swift */,
-				A209221E24D129E8003E60F5 /* Main.storyboard */,
 				A209222124D129E9003E60F5 /* Assets.xcassets */,
 				A209222324D129E9003E60F5 /* LaunchScreen.storyboard */,
 				A209222624D129E9003E60F5 /* Info.plist */,
-				A2BB166224D1BC590001A78B /* Task.swift */,
-				A2BB166424D1BCC30001A78B /* TaskStore.swift */,
 			);
-			path = MyTask;
+			path = System;
+			sourceTree = "<group>";
+		};
+		A288CE3B24D5553E007B8CBA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A209221E24D129E8003E60F5 /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q5Q447367N;
-				INFOPLIST_FILE = MyTask/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MyTask/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q5Q447367N;
-				INFOPLIST_FILE = MyTask/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MyTask/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

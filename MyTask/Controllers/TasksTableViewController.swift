@@ -40,7 +40,6 @@ class TasksTableViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = rightBarBtn
         self.navigationItem.rightBarButtonItem?.tintColor = .white
         
-        
     }
     
     //MARK: - Controller
@@ -123,7 +122,14 @@ extension TasksTableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TasksTableViewCell", for: indexPath)
+        
+        // View for cell
+        // Set cell's selection style to none
+        cell.selectionStyle = .none
+        
+        // Data for cell
         cell.textLabel?.text = taskStore.tasks[indexPath.section][indexPath.row].name
+
         return cell
     }
     
@@ -137,17 +143,55 @@ extension TasksTableViewController {
     
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let deleteAction = UIContextualAction(style: .destructive, title: nil) { (action, sourceView, <#@escaping (Bool) -> Void#>) in
-            <#code#>
+        let doneAction = UIContextualAction(style: .normal, title: nil) { (action, sourceView, completionHandler) in
+            
+            // Toggle that task is done
+            self.taskStore.tasks[0][indexPath.row].isDone = true
+            
+            // Remove the task from the array containing todo tasks
+            let newDoneTask = self.taskStore.remove(at: indexPath.row)
+            
+            // Reload table view for todo section
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            // Add the task from the array containing done tasks
+            self.taskStore.add(newDoneTask, at: 0, isDone: true)
+            
+            // Reload table view for done section
+            let newIndexPath = IndexPath.init(row: 0, section: 1)
+            self.tableView.insertRows(at: [newIndexPath], with: .automatic)
+            
+            // Indicate that the action was performed
+            completionHandler(true)
+            
         }
-        // Determine whether the task is done
         
-        // Remove the task from the appropriate array
+        doneAction.image = #imageLiteral(resourceName: "done")
+        doneAction.backgroundColor = #colorLiteral(red: 0.01176470588, green: 0.7529411765, blue: 0.2901960784, alpha: 1)
         
-        // Indicate that the action was performed
+        return indexPath.section == 0 ? UISwipeActionsConfiguration(actions: [doneAction]) : nil
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        <#code#>
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: nil) { (action, sourceView, completionHandler) in
+            
+            // Determine whether the task is done
+            let isDone = self.taskStore.tasks[indexPath.section][indexPath.row].isDone
+            
+            // Remove the task from the appropriate array
+            self.taskStore.remove(at: indexPath.row, isDone: isDone)
+            
+            // Reload table view
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            // Indicate that the action was performed
+            completionHandler(true)
+        }
+        
+        deleteAction.image = #imageLiteral(resourceName: "delete")
+        deleteAction.backgroundColor = #colorLiteral(red: 0.8862745098, green: 0.1450980392, blue: 0.168627451, alpha: 1)
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 }
