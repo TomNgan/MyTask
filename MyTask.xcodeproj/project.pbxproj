@@ -12,6 +12,7 @@
 		A209222024D129E8003E60F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A209221E24D129E8003E60F5 /* Main.storyboard */; };
 		A209222224D129E9003E60F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A209222124D129E9003E60F5 /* Assets.xcassets */; };
 		A209222524D129E9003E60F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A209222324D129E9003E60F5 /* LaunchScreen.storyboard */; };
+		A288CE3D24D556AF007B8CBA /* TasksUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288CE3C24D556AF007B8CBA /* TasksUtility.swift */; };
 		A2BB166124D161A70001A78B /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB166024D161A70001A78B /* TasksTableViewController.swift */; };
 		A2BB166324D1BC590001A78B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB166224D1BC590001A78B /* Task.swift */; };
 		A2BB166524D1BCC30001A78B /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB166424D1BCC30001A78B /* TaskStore.swift */; };
@@ -25,6 +26,7 @@
 		A209222124D129E9003E60F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A209222424D129E9003E60F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A209222624D129E9003E60F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A288CE3C24D556AF007B8CBA /* TasksUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksUtility.swift; sourceTree = "<group>"; };
 		A2BB166024D161A70001A78B /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 		A2BB166224D1BC590001A78B /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		A2BB166424D1BCC30001A78B /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				A2BB166424D1BCC30001A78B /* TaskStore.swift */,
+				A288CE3C24D556AF007B8CBA /* TasksUtility.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				A2BB166524D1BCC30001A78B /* TaskStore.swift in Sources */,
 				A2BB166324D1BC590001A78B /* Task.swift in Sources */,
 				A2BB166124D161A70001A78B /* TasksTableViewController.swift in Sources */,
+				A288CE3D24D556AF007B8CBA /* TasksUtility.swift in Sources */,
 				A209221924D129E8003E60F5 /* AppDelegate.swift in Sources */,
 				A209221B24D129E8003E60F5 /* SceneDelegate.swift in Sources */,
 			);

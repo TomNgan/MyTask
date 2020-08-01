@@ -43,7 +43,15 @@ class TasksTableViewController: UITableViewController {
     }
     
     //MARK: - Controller
-    var taskStore: TaskStore!
+    var taskStore: TaskStore! {
+        didSet {
+            // Get the data from user defaults
+            taskStore.tasks = TasksUtility.fetch() ?? [[Task](), [Task]()]
+            
+            // Reload the table view
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         
@@ -177,7 +185,7 @@ extension TasksTableViewController {
         let deleteAction = UIContextualAction(style: .destructive, title: nil) { (action, sourceView, completionHandler) in
             
             // Determine whether the task is done
-            let isDone = self.taskStore.tasks[indexPath.section][indexPath.row].isDone
+            guard let isDone = self.taskStore.tasks[indexPath.section][indexPath.row].isDone else { return }
             
             // Remove the task from the appropriate array
             self.taskStore.remove(at: indexPath.row, isDone: isDone)
