@@ -7,8 +7,8 @@ As a programmer, I want to create a to-do application for myself. To find best p
 ## Preview
 | No Task                        		  | Add a Task                 		     	| One task in Todo	       			      | Delete a Task					            	|
 | ----------------------------------- | ----------------------------------- | ----------------------------------- | ----------------------------------- |
-| ![](Documentation/images/img1.png)  | ![](Documentation/images/img2.png)  | ![](Documentation/images/img3.png)  | ![](Documentation/images/img4.png)  |
+| ![](Documentation/images/image1.png)  | ![](Documentation/images/image2.png)  | ![](Documentation/images/image3.png)  | ![](Documentation/images/image4.png)  |
 | ----------------------------------- | ----------------------------------- | ----------------------------------- | ----------------------------------- |
 | Finish a Task				          		  | New Task is added                   |
-| ![](Documentation/images/img5.png)  | ![](Documentation/images/img6.png)  |
+| ![](Documentation/images/image5.png)  | ![](Documentation/images/image6.png)  |
 | ----------------------------------- | ----------------------------------- |
