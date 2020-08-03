@@ -12,3 +12,6 @@ As a programmer, I want to create a to-do application for myself. To find best p
 | Delete a Task				  	            	| Finish a Task				          		    | New Task is added                     |
 | ------------------------------------- | ------------------------------------- | ------------------------------------- |
 | ![](Documentation/Images/image4.PNG)  | ![](Documentation/Images/image5.PNG)  | ![](Documentation/Images/image6.PNG)  |
+
+## License
+**MyTask** is under MIT license. See the [LICENSE](LICENSE) file for more info.
