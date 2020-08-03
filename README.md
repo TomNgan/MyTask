@@ -8,5 +8,7 @@ As a programmer, I want to create a to-do application for myself. To find best p
 | No Task                        		  | Add a Task                 		     	| One task in Todo	       			      | Delete a Task					            	|
 | ----------------------------------- | ----------------------------------- | ----------------------------------- | ----------------------------------- |
 | ![](Documentation/images/image1.PNG)  | ![](Documentation/images/image2.PNG)  | ![](Documentation/images/image3.PNG)  | ![](Documentation/images/image4.PNG)  |
+
 | Finish a Task				          		  | New Task is added                   |
+| ----------------------------------- | ----------------------------------- |
 | ![](Documentation/images/image5.PNG)  | ![](Documentation/images/image6.PNG)  |
